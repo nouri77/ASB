@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Partners · Snowboard Afghanistan</title>
+<meta name="description" content="The federations, associations and supporters behind Afghanistan Snowboard.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px);align-items:end;margin-bottom:clamp(44px,5vw,68px)}
+@media (max-width:900px){.intro{grid-template-columns:1fr}}
+.intro .h2{margin-top:10px}
+.intro p{font-size:18px;max-width:54ch}
+.pstats{display:flex;gap:clamp(24px,4vw,56px);margin-top:26px}
+.pstats b{display:block;font-size:clamp(34px,3.6vw,48px);font-weight:900;letter-spacing:-.04em;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+.pstats small{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2vw,28px)}
+@media (max-width:1080px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.pgrid{grid-template-columns:1fr}}
+.pcard{display:flex;flex-direction:column;overflow:hidden}
+.pcard .plogo{aspect-ratio:16/11;max-width:100%;background:var(--mist);display:grid;place-items:center;padding:clamp(22px,2.4vw,34px);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.pcard .plogo img{max-height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform .7s var(--ease)}
+.pcard:hover .plogo img{transform:scale(1.08)}
+.plogo .mono{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid var(--green);color:var(--green);font-size:30px;font-weight:900;letter-spacing:-.04em;transition:transform .7s var(--ease)}
+.pcard:hover .mono{transform:scale(1.08) rotate(-6deg)}
+.pbody{padding:24px 24px 26px;display:grid;gap:10px;flex:1;align-content:start}
+.pbody small{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+.pbody h3{font-size:19px;font-weight:800;line-height:1.3}
+.pbody p{font-size:15.5px}
+.pbody .more{margin-top:auto;padding-top:8px;font-size:15px}
+.pcard.cta{background:var(--green);border-color:var(--green);color:#fff;justify-content:center;padding:clamp(28px,3vw,40px);gap:16px}
+.pcard.cta h3{color:#fff;font-size:24px;font-weight:800}
+.pcard.cta p{color:rgba(255,255,255,.88);font-size:16px}
+.pcard.cta .plus{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.14);border:1.5px dashed rgba(255,255,255,.6);display:grid;place-items:center;font-size:30px;font-weight:300;transition:transform .6s var(--ease)}
+.pcard.cta:hover .plus{transform:rotate(90deg)}
+.pcard.cta .btn{align-self:flex-start;margin-top:6px;white-space:nowrap;padding:13px 24px;font-size:16px}
+
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,36px)}
+@media (max-width:900px){.ways{grid-template-columns:1fr}}
+.way{padding:clamp(30px,3vw,44px);display:grid;gap:16px;align-content:start}
+.way:hover .ic{background:var(--green);color:#fff;transform:rotate(-12deg) scale(1.06)}
+.way h3{font-size:clamp(22px,2vw,26px);font-weight:800;margin-top:8px}
+.way ul{list-style:none;display:grid;gap:10px;margin-top:4px}
+.way li{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.way li svg.i{width:18px;height:18px;color:var(--green);margin-top:4px;stroke-width:2.6}
+.way .more{margin-top:10px}
+
+.inq{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,80px);align-items:center}
+@media (max-width:900px){.inq{grid-template-columns:1fr}}
+.inq .h2{margin-top:10px}
+.inq p.lead{margin-top:20px;font-size:18px;max-width:54ch}
+.inq-card{background:#fff;border-radius:22px;padding:clamp(28px,3vw,44px);box-shadow:var(--shadow-lg);border:1px solid var(--line);display:grid;gap:22px}
+.inq-card h3{font-size:24px;font-weight:800}
+.row{display:flex;gap:18px;align-items:center}
+.row .ic{width:52px;height:52px}
+.row .ic svg.i{width:22px;height:22px}
+.row small{display:block;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.row b{color:var(--ink);font-size:17px;overflow-wrap:anywhere;user-select:all}
+.row:hover .ic{background:var(--green);color:#fff;transform:rotate(-8deg)}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Snowboard AFG home"><span class="mark"><img src="img/logo.png" alt=""></span>SNOWBOARD AFG</a>
+    <ul class="menu" id="menu">
+      <li><a href="./">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="has-drop"><a href="team.html" class="active" aria-haspopup="true">Team <svg class="i caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+        <ul class="drop">
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="partners.html" class="active">Our Partners</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf7BB5BOXyCw32if4dYP2bWL-ANnYIw_JP5Wramjzsa8PQuxw/viewform" target="_blank" rel="noopener">Become a Member</a></li>
+        </ul>
+      </li>
+      <li><a href="news.html">News &amp; Events</a></li>
+      <li><a href="./#support">Support Us</a></li>
+      <li><a href="./#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-red nav-cta mag" href="https://www.paypal.com/ca/home" target="_blank" rel="noopener">Donate Now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<main id="top">
+<section class="phero">
+  <div class="phero-bg" style="background-image:url(img/hero.jpg);background-position:70% 45%"></div>
+  <canvas aria-hidden="true"></canvas>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="./">Home</a><span aria-hidden="true">/</span><span>Our Partners</span></nav>
+    <h1><span class="line"><span class="w" style="animation-delay:0.15s">Our</span></span><span class="line"><span class="w metal" style="animation-delay:0.35s">Partners</span></span></h1>
+    <p>The federations, associations and supporters who help Afghan youth ride.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <span class="eyebrow rv">Our Prestigious Partners</span>
+        <h2 class="h2 rv">Support Snowboarding in Afghanistan</h2>
+      </div>
+      <div class="rv">
+        <p>Our partners make it possible for Afghan athletes to train, compete and represent their country with pride. Together we show a new and peaceful face of Afghanistan to the world.</p>
+        <div class="pstats">
+          <div><b data-count="7">7</b><small>Partners</small></div>
+          <div><b data-count="2">2</b><small>International federations</small></div>
+          <div><b data-count="2017" data-from="1995">2017</b><small>WSF member since</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="pgrid"><article class="card pcard rv"><div class="plogo"><img src="img/p-wsf.png" alt="World Snowboard Federation logo"></div><div class="pbody"><small>International Federation</small><h3>World Snowboard Federation</h3><p>Afghanistan Snowboard began its journey in 2017 by officially joining the WSF.</p><a class="more" href="https://www.worldsnowboardfederation.org/news/afghanistan-snowboarding/" target="_blank" rel="noopener">Read their story <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div></article><article class="card pcard rv"><div class="plogo"><img src="img/p-fis.png" alt="FIS logo"></div><div class="pbody"><small>International Federation</small><h3>International Ski and Snowboard Federation (FIS)</h3><p>FIS recognition connects Afghan athletes to global standards in competition.</p></div></article><article class="card pcard rv"><div class="plogo"><img src="img/p-olympic.png" alt="Afghanistan Olympic Committee logo"></div><div class="pbody"><small>National Olympic Body</small><h3>Afghanistan Olympic Committee</h3><p>Endorses and supports our athletes, including the team at the 2025 Asian Winter Games.</p></div></article><article class="card pcard rv"><div class="plogo"><img src="img/p-asf.png" alt="Afghanistan Ski Federation logo"></div><div class="pbody"><small>National Federation</small><h3>Afghanistan Ski Federation</h3><p>Endorses our work and partnered on the first methodical snowboarding seminar in Kabul.</p></div></article><article class="card pcard rv"><div class="plogo"><img src="img/p-doctoristan.png" alt="Doctoristan logo"></div><div class="pbody"><small>Partner</small><h3>Doctoristan</h3><p>A proud supporting partner of snowboarding in Afghanistan.</p></div></article><article class="card pcard rv"><div class="plogo"><span class="mono">GG</span></div><div class="pbody"><small>Partner</small><h3>Grow Global</h3><p>A proud supporting partner of snowboarding in Afghanistan.</p></div></article><article class="card pcard rv"><div class="plogo"><span class="mono">BN</span></div><div class="pbody"><small>Swiss Association</small><h3>Boule de Neige</h3><p>A Swiss association supporting snowboarding for Afghan youth.</p></div></article><article class="card pcard cta rv"><span class="plus" aria-hidden="true">+</span><h3>Your Organization Here</h3><p>Join the federations, associations and supporters helping Afghan youth ride.</p><a class="btn btn-white mag" href="#partner">Become a Partner</a></article></div>
+  </div>
+</section>
+
+<section class="sec bg-mist" id="partner">
+  <div class="wrap">
+    <div class="head-c rv"><span class="eyebrow">Get Involved</span><h2 class="h2 sm">Ways to Partner With Us</h2><span class="bar"></span>
+      <p class="sub">Organizations, brands and individuals can support Afghan snowboarding in three ways.</p></div>
+    <div class="ways">
+      <article class="card way rv">
+        <span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M3 20l6-10 4 6 3-4 5 8z"/><circle cx="17" cy="5" r="2"/></svg></span>
+        <h3>Sponsor a Program or Athlete</h3>
+        <p>Fund specific training camps, competitions or athletes.</p>
+        <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Youth training camps</li><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Travel to international events</li><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Coaching and seminars</li></ul>
+        <a class="more" href="#inquiry">Start a conversation <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card way rv">
+        <span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span>
+        <h3>Donate Equipment</h3>
+        <p>Have spare gear? It goes straight to riders who need it.</p>
+        <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Snowboards and bindings</li><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Boots and helmets</li><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Winter clothing</li></ul>
+        <a class="more" href="#inquiry">Arrange a donation <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card way rv">
+        <span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.6-9.5 9-9.5 9z"/></svg></span>
+        <h3>Financial Support</h3>
+        <p>Direct support helps us maintain facilities and run programs.</p>
+        <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>One-time donation</li><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Our GoFundMe campaign</li><li><svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Shop from our store (coming soon)</li></ul>
+        <a class="more" href="https://www.gofundme.com/f/sports-for-peace-snowboarding-for-a-brighter-future" target="_blank" rel="noopener">Visit GoFundMe <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="inquiry">
+  <div class="wrap inq">
+    <div>
+      <span class="eyebrow rv">Become a Partner</span>
+      <h2 class="h2 rv">Let's Build the Future of Afghan Snowboarding</h2>
+      <p class="lead rv">Tell us about your organization and how you would like to help. Our president will reply personally.</p>
+      <div class="rv" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:30px">
+        <a class="btn btn-green mag" href="./#contact">Send Us a Message <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-outline mag" href="https://wa.me/15195917274" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="inq-card rv">
+      <h3>Partnership Contact</h3>
+      <div class="row"><span class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span><div><small>Email</small><b>president.afg.snowboarding@gmail.com</b></div></div>
+      <div class="row"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>Phone &amp; WhatsApp</small><b>+1 (519) 591-7274</b></div></div>
+      <div class="row"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.5a7 7 0 0 0-14 0C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>Office</small><b>Chaman Hozori, Kabul, Afghanistan</b></div></div>
+    </div>
+  </div>
+</section>
+<section class="sec give">
+  <div class="give-bg"></div>
+  <div class="wrap">
+    <div class="head-c rv" style="margin-bottom:0">
+      <span class="eyebrow">Support a War-Torn Nation</span>
+      <h2 class="h2">Help Us Promote Snowboarding</h2>
+      <p class="sub">Your support brings snowboards, training, and hope to Afghan youth. Every contribution makes a difference.</p>
+      <div class="give-cta"><a class="btn btn-red mag" href="https://www.paypal.com/ca/home" target="_blank" rel="noopener">Donate Now</a><a class="btn btn-line mag" href="https://www.gofundme.com/f/sports-for-peace-snowboarding-for-a-brighter-future" target="_blank" rel="noopener">GoFundMe Campaign</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a class="brand" href="./"><span class="mark"><img src="img/logo.png" alt=""></span>SNOWBOARD AFG</a>
+        <p>Afghanistan's pioneering snowboard organization, empowering youth through winter sport since 2017. Promoting peace, social inclusion, and national pride.</p>
+      </div>
+      <div><h5>About ASO</h5><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#mission">Mission &amp; Vision</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="https://afghanistansnowboard.org/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><a href="https://www.linktr.ee/afghanistansnowboard" target="_blank" rel="noopener">Social Profiles</a></li></ul></div>
+      <div><h5>Quick Links</h5><ul>
+        <li><a href="partners.html">Our Partners</a></li>
+        <li><a href="partners.html#partner">Become a Partner</a></li>
+        <li><a href="news.html">News &amp; Events</a></li>
+        <li><a href="https://www.paypal.com/ca/home" target="_blank" rel="noopener">Donate</a></li>
+        <li><a href="./#contact">Contact Us</a></li></ul></div>
+      <div><h5>Contact Info</h5><ul>
+        <li>+1 (519) 591-7274</li>
+        <li>Chaman Hozori, Kabul, Afghanistan</li>
+        <li>president.afg.snowboarding@gmail.com</li></ul></div>
+    </div>
+    <div class="f-bot"><span>© 2026 Snowboard Afghanistan. All rights reserved.</span><span>Designed and developed by The GrowLocal Marketing</span></div>
+  </div>
+</footer>
+<a class="totop" id="totop" href="#top" aria-label="Back to top"><svg class="i" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></a>
+<script src="site.js"></script>
+</body>
+</html>
